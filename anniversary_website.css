@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* พื้นหลังไล่สีม่วง */
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(120deg, #a770ef, #cf8bf3, #fdb99b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ซ่อนหน้าปฏิทินเริ่มต้น */
+.hidden {
+  display: none;
+}
+
+/* ---- หน้าล็อกอิน ---- */
+.login-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  color: #4a148c;
+}
+
+.login-box h2 {
+  margin-bottom: 10px;
+}
+
+.login-box input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  text-align: center;
+  margin-bottom: 10px;
+  background: #f3e5f5;
+  color: #4a148c;
+  font-weight: 500;
+}
+
+.unlock-btn {
+  background: #ab47bc;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.unlock-btn:hover {
+  background: #9c27b0;
+}
+
+.lock-icon {
+  margin-left: 5px;
+}
+
+.error-message {
+  margin-top: 10px;
+  color: red;
+  font-size: 14px;
+}
+
+/* popup ปฏิทิน (date picker) */
+.calendar-popup {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f3e5f5;
+  padding: 10px;
+  border-radius: 8px;
+  display: none;
+}
+
+.calendar-popup input[type="date"] {
+  background: #e1bee7;
+  color: #4a148c;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/* ---- หน้าปฏิทินหลัก ---- */
+.main-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  padding-top: 60px;
+}
+
+/* ส่วนหัวของปฏิทิน */
+.title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+/* กล่องปฏิทินโปร่งใส */
+.calendar {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* weekdays + days ใช้ Grid Layout 7 คอลัมน์ */
+.weekdays, .days {
+  display: grid;
+  grid-template-columns: repeat(7, 50px);
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.weekdays div, .days div {
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #fff;
+  border-radius: 5px;
+}
+
+/* วันพฤหัสที่ 5 เรืองแสง */
+.glow {
+  box-shadow: 0 0 15px 5px rgba(138, 43, 226, 0.8);
+  background-color: rgba(138, 43, 226, 0.2);
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+}
